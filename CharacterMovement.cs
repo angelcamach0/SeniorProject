@@ -25,6 +25,6 @@ public class CharacterMovement :  MonoBehaviour {
         
      void moveCharacter(Vector2 catVelocity) {
          
-         theRB.velocity = (catVelocity * moveSpeed) * Time.deltaTIme;
+         theRB.velocity = (catVelocity * moveSpeed) * Time.deltaTime;
    } //end Update
 } //end CharacterMovement
