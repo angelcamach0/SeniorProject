@@ -31,11 +31,11 @@ public class CharacterMovement :  MonoBehaviour {
         } //end if
         
         if (Input.GetKeyCode(KeyCode.UpArrow)) {
-            transfrom.position += Vector3.forward * runSpeed * time.DeltaTime;
+            transfrom.position += Vector3.forward * runSpeed * time.deltaTime;
         } //end if
         
         if (Input.GetKeyCode(KeyCode.DownArrow)) {
-            transform.position += Vector3.back * runSpeed * time.DeltaTime;
+            transform.position += Vector3.back * runSpeed * time.deltaTime;
         } //end if
 
        Vector2 catVelocity = new Vector2 (Input.getAxisRow("Horizontal"), Input.getAxisRow("Vertical"));
