@@ -7,6 +7,7 @@ public class CharacterMovement :  MonoBehaviour {
     public GameObject character;
     
     public float moveSpeed;
+   // public float horizontal;
     public float vertical;
     public float runSpeed = 20.0f;
 
@@ -31,7 +32,7 @@ public class CharacterMovement :  MonoBehaviour {
         } //end if
         
         if (Input.GetKeyCode(KeyCode.UpArrow)) {
-            transfrom.position += Vector3.forward * runSpeed * time.deltaTime;
+            transform.position += Vector3.forward * runSpeed * time.deltaTime;
         } //end if
         
         if (Input.GetKeyCode(KeyCode.DownArrow)) {
