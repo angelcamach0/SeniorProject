@@ -4,45 +4,36 @@ using UnityEngine;
 
 public class CharacterMovement :  MonoBehaviour {
 
-    public GameObject character;
-    
-    public float moveSpeed;
-   // public float horizontal;
-    public float vertical;
+    private Rigidbody2D theRB;
     public float runSpeed = 20.0f;
-
-    private RigidBody2D theRB;
 
    
     void Awake() {
 
-      theRB = GetComponent<RigidBody2D>();
+      theRB = GetComponent<Rigidbody2D>();
 
-       rigidBody2D.gravityScale = 0.0f;
+       GetComponent<Rigidbody2D>().gravityScale = 0.0f;
     }
 
     void Update() {
         
-        if(Input.GetKey(KeyCode.RightArrow)) {
-            transform.position += Vector3.right * runSpeed * time.deltaTime;
-        } //end if
-        
-        if (Input.GetKey(KeyCode.LeftArrow)) {
-            transform.position += Vector3.left * runSpeed * time.deltaTime;
-        } //end if
-        
-        if (Input.GetKeyCode(KeyCode.UpArrow)) {
-            transform.position += Vector3.forward * runSpeed * time.deltaTime;
-        } //end if
-        
-        if (Input.GetKeyCode(KeyCode.DownArrow)) {
-            transform.position += Vector3.back * runSpeed * time.deltaTime;
-        } //end if
-
-       Vector2 catVelocity = new Vector2 (Input.getAxisRow("Horizontal"), Input.getAxisRow("Vertical"));
+       Vector2 catVelocity = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
        moveCharacter(catVelocity);
+    } //end Update 
         
      void moveCharacter(Vector2 catVelocity) {
-         theRB.velocity = (catVelocity * moveSpeed) * Time.deltaTime;
-   } //end Update
+         theRB.velocity = (catVelocity * runSpeed) * Time.deltaTime;
+     
+    //Make character change direction (left or right)
+    Vector3 mousePos = Input.mousePosition;
+    Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
+
+    if (mousePos.x < screenPoint.x) {
+        transform.localScale = new Vector3(-1f, 1f, 1f);
+    }
+    else {
+       transform.localScale = Vector3.one;
+    }
+   } //end moveCharacter class
+   
 } //end CharacterMovement class
