@@ -6,6 +6,8 @@ public class CharacterMovement :  MonoBehaviour {
 
     private Rigidbody2D theRB;
     public float runSpeed = 20.0f;
+    public Animator animator;
+
 
    
     void Awake() {
@@ -16,9 +18,12 @@ public class CharacterMovement :  MonoBehaviour {
     }
 
     void Update() {
+
+       animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         
        Vector2 catVelocity = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
        moveCharacter(catVelocity);
+
     } //end Update 
         
      void moveCharacter(Vector2 catVelocity) {
