@@ -1,16 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundCollider : MonoBehaviour {
+public class GroundCollider : MonoBehaviour
+{
+    private BoxCollider2D groundCollider;
+    private float groundHorizontalLength;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        groundCollider = GetComponent<BoxCollider2D>();
+        groundHorizontalLength = groundCollider.size.x;
+    }
+        
 
-public Texture2d text;
+    // Update is called once per frame
+    void Update()
+    {
+         if (transform.position.x < -groundHorizontalLength)
+        {
+            RepositionBackground();
+        }
+    }
 
-
-void Awake() {
-
-    SpriteRenderer sprite = gameObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
-    transform.position = new Vector3(0.0f, -2.0f, 0.0f);
+     private void RepositionBackground()
+    {
+        Vector2 groundOffset = new Vector2(groundHorizontalLength * 2f, 0);
+        transform.position = (Vector2)transform.position + groundOffset;
+    }
 }
-public class GroundCollider : MonoBehaviour {
 
 
