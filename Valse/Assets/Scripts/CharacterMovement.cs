@@ -8,14 +8,16 @@ public class CharacterMovement :  MonoBehaviour {
     public float runSpeed = 20.0f;
     public Animator animator;
 
-
-   
+    
+    
     void Awake() {
 
       theRB = GetComponent<Rigidbody2D>();
 
        GetComponent<Rigidbody2D>().gravityScale = 0.0f;
     }
+
+    
 
     void Update() {
 
