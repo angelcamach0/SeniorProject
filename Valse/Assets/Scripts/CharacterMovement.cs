@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// Code Monkey function used to for detecting basic mouse click input
+using CodeMonkey;
 
 public class CharacterMovement :  MonoBehaviour {
 
@@ -26,6 +28,14 @@ public class CharacterMovement :  MonoBehaviour {
        Vector2 catVelocity = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
        moveCharacter(catVelocity);
 
+       // Basic mouse input for attack
+       if(Input.GetMouseButtonDown(0)){
+         Vector3 mousePosition = CodeMonkey.Utils.UtilsClass.GetMouseWorldPosition();
+         Vector3 attackDir = (mousePosition - transform.position).normalized;
+         CMDebug.TextPopupMouse(""+ attackDir);
+         //Play attack animation
+       }
+
     } //end Update 
         
      void moveCharacter(Vector2 catVelocity) {
@@ -44,4 +54,3 @@ public class CharacterMovement :  MonoBehaviour {
    } //end moveCharacter class
    
 } //end CharacterMovement class
-
