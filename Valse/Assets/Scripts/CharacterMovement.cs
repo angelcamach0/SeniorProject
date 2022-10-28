@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterMovement :  MonoBehaviour {
 
     private Rigidbody2D theRB;
+    private bool attack;
     public float runSpeed = 20.0f;
     public Animator animator;
 
@@ -26,6 +27,13 @@ public class CharacterMovement :  MonoBehaviour {
        Vector2 catVelocity = new Vector2 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
        moveCharacter(catVelocity);
 
+       Attack();
+
+       ResetAttack();
+       AttackInput();
+
+     
+
     } //end Update 
         
      void moveCharacter(Vector2 catVelocity) {
@@ -42,6 +50,27 @@ public class CharacterMovement :  MonoBehaviour {
        transform.localScale = Vector3.one;
     }
    } //end moveCharacter class
+
+    private void Attack()
+    {
+        if(attack)
+        {
+            animator.SetTrigger("attack");
+        }
+    }
+
+    private void AttackInput()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            attack = true;
+        }
+    }
+
+    private void ResetAttack()
+    {
+        attack = false;
+    }
    
 } //end CharacterMovement class
 
