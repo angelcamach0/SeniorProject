@@ -9,9 +9,15 @@ public class EnemyMovement: MonoBehaviour {
    Transform target;
    Vector2 moveDirection;
    public Animator animator;
+   public Transform playerCharacter;
+   private SpriteRenderer spriteRenderer;
+
+
 
    private void Awake() {
     theRB = GetComponent<Rigidbody2D>();
+
+    this.spriteRenderer = this.GetComponent<SpriteRenderer>();
    }
 
    private void Start() {
@@ -20,11 +26,13 @@ public class EnemyMovement: MonoBehaviour {
 
    private void Update() {
 
+    this.spriteRenderer.flipX = playerCharacter.transform.position.x > this.transform.position.x;
+
     if(target) {
 
         Vector3 direction = (target.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        theRB.rotation = angle;
+        //theRB.rotation = angle;
         moveDirection = direction;
     }
    }
