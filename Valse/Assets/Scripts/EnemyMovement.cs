@@ -8,9 +8,18 @@ public class EnemyMovement: MonoBehaviour {
    Rigidbody2D theRB;
    Transform target;
    Vector2 moveDirection;
+   
+    
    public Animator animator;
    public Transform playerCharacter;
+   public GameObject projectile;
+   public float startTimeShots;
+    
    private SpriteRenderer spriteRenderer;
+   private float timeBetweenShots;
+
+
+
 
 
 
@@ -22,7 +31,12 @@ public class EnemyMovement: MonoBehaviour {
 
    private void Start() {
     target = GameObject.Find("PlayerCat").transform;
+
+
+    timeBetweenShots = startTimeShots;
    }
+
+
 
    private void Update() {
 
@@ -35,6 +49,16 @@ public class EnemyMovement: MonoBehaviour {
         //theRB.rotation = angle;
         moveDirection = direction;
     }
+
+    if(timeBetweenShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBetweenShots = startTimeShots;
+        }
+   else
+        {
+            timeBetweenShots -= Time.deltaTime;
+        }
    }
 
 

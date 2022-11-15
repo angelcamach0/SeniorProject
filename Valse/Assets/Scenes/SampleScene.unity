@@ -2043,7 +2043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.0794, y: -0.4615}
+  m_AnchoredPosition: {x: -4.23, y: -0.73}
   m_SizeDelta: {x: 1.56, y: 1.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1937333256
@@ -2083,6 +2083,8 @@ MonoBehaviour:
   moveSpeed: 1
   animator: {fileID: 1937333260}
   playerCharacter: {fileID: 1714475139}
+  projectile: {fileID: 5222308774749513936, guid: 721ae700f31d7a1448733747fe9699e5, type: 3}
+  startTimeShots: 2
 --- !u!61 &1937333258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2221,7 +2223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937333256}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.341, y: 1.1843, z: 1}
+  m_LocalPosition: {x: 2.9, y: 3.57, z: 1}
   m_LocalScale: {x: 0.24683635, y: 0.23184966, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2306,7 +2308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020915170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47224045, y: 0.8305385, z: 0.18}
+  m_LocalPosition: {x: 0.47224045, y: 0.8305385, z: 1.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
