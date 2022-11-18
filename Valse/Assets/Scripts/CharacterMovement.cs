@@ -6,6 +6,7 @@ public class CharacterMovement :  MonoBehaviour {
 
     private Rigidbody2D theRB;
     private bool attack;
+    public GameObject[] players;
     public float runSpeed = 20.0f;
     public Animator animator;
 
@@ -19,6 +20,12 @@ public class CharacterMovement :  MonoBehaviour {
     }
 
     
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+
 
     void Update() {
 
@@ -72,5 +79,23 @@ public class CharacterMovement :  MonoBehaviour {
         attack = false;
     }
    
+    private void OnLevelWasLoaded(int level)
+    {
+        FindStartPos();
+
+        players = GameObject.FindGameObjectsWithTag("Player"); 
+        
+        if(players.Length > 1)
+        {
+            Destroy(players[1]);
+        }
+    }
+
+    void FindStartPos()
+    {
+        transform.position = GameObject.FindWithTag("StartPos").transform.position;
+    }
+
+
 } //end CharacterMovement class
 
