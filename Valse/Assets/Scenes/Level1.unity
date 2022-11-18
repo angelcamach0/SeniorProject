@@ -676,13 +676,10 @@ PrefabInstance:
       propertyPath: heartSystem.Array.data[7]
       value: 
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 6959611372336108980, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
       propertyPath: runSpeed
       value: 1500
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
     - target: {fileID: 6959611372336108983, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
       propertyPath: m_Name
       value: PlayerCat
@@ -700,57 +697,54 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 844711845314366610, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -404.47
+      value: -402.13
       objectReference: {fileID: 0}
     - target: {fileID: 844711845314366610, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227.5
+      value: -227.67
       objectReference: {fileID: 0}
     - target: {fileID: 844711845764230384, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -401.13
+      value: -398.9
       objectReference: {fileID: 0}
     - target: {fileID: 844711845764230384, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227.5
+      value: -227.48
       objectReference: {fileID: 0}
     - target: {fileID: 844711845769184094, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -402.73
+      value: -400.47
       objectReference: {fileID: 0}
     - target: {fileID: 844711845769184094, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227.43
+      value: -227.61
       objectReference: {fileID: 0}
     - target: {fileID: 844711846078003773, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -407.67
+      value: -405.17
       objectReference: {fileID: 0}
     - target: {fileID: 844711846078003773, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227.37
+      value: -227.67
       objectReference: {fileID: 0}
     - target: {fileID: 844711846283206481, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -406.08
+      value: -403.56
       objectReference: {fileID: 0}
     - target: {fileID: 844711846283206481, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227.43
+      value: -227.74
       objectReference: {fileID: 0}
     - target: {fileID: 844711846780651625, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -409.17
+      value: -406.89
       objectReference: {fileID: 0}
     - target: {fileID: 844711846780651625, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -227.32
+      value: -227.59
       objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 7647306689035436140, guid: fac3d270c2fe9fc429c5b37d09e1c640, type: 3}
       propertyPath: m_Name
       value: Canvas
