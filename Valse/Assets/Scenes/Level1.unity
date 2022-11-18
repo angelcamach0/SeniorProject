@@ -608,7 +608,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6959611372336108879, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959611372336108879, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
+      propertyPath: playerHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959611372336108879, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
+      propertyPath: lives.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959611372336108879, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
       propertyPath: heartSystem.Array.data[0]
