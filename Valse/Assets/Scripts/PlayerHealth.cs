@@ -5,39 +5,36 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-       public int health;
-       public int amountofHealth;
-
-       public Image[] heartSystem;
+     public int playerHealth;
+    
+      public GameObject[] lives;
        public Sprite full_Life;
        public Sprite empty_Life;
 
-       void Update() {
+private void Start() {
+     UpdateHealth();
+}
 
-         if (health > amountofHealth) {
-               health = amountofHealth;
-            } //end if
+public void UpdateHealth() 
+   {
 
-         for (int n = 0; n < heartSystem.Length; n++) {
+        for (int i = 0; i < lives.Length; i++) {
+  
+             if (i < playerHealth) {
+               SpriteRenderer spriteRenderer = lives[i].GetComponent<SpriteRenderer>();
+                 spriteRenderer.sprite = full_Life;
+                //lives[0].sprite = full_Life;
+             } //end if
 
-            if (n < health) {
-               heartSystem[n].sprite = full_Life;
-            } //end if
-
-            else {
-               heartSystem[n].sprite = empty_Life;
-            } //end else
-
-            if (n < amountofHealth) {
-               heartSystem[n].enabled = true;
-            } //end if
-
-            else {
-               heartSystem[n].enabled = false;
-            } //end else
-         } //end for
-       } //end Update function
+             else {
+               SpriteRenderer spriteRenderer = lives[i].GetComponent<SpriteRenderer>();
+               spriteRenderer.sprite = empty_Life;
+              // lives[i].sprite = empty_Life;
+             } //end else
+       } //end for
        
+
+      } //end UpdateHealth
  } //end PlayerHealth method
 
 
