@@ -625,19 +625,40 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3849638034110235734, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849638034110235734, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1088431770}
+    - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1414847452}
+    - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: moveSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: currHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
       propertyPath: playerCharacter
       value: 
       objectReference: {fileID: 6959611372336108877, guid: 4db8a133caabfbb419592659d5cd3a6f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+--- !u!1 &1088431770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3849638034110235734, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+  m_PrefabInstance: {fileID: 1088431769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1125280897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,12 +865,24 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3849638034110235734, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849638034110235734, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1414847453}
+    - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
       propertyPath: moveSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+      propertyPath: currHealth
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3849638034110235735, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
       propertyPath: playerCharacter
@@ -860,6 +893,11 @@ PrefabInstance:
 --- !u!95 &1414847452 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3849638034110235730, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
+  m_PrefabInstance: {fileID: 1414847451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1414847453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3849638034110235734, guid: 90073c5ce3ed8724189839cbc6d46e5b, type: 3}
   m_PrefabInstance: {fileID: 1414847451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2075407222

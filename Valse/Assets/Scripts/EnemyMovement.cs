@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyMovement: MonoBehaviour {
 
+   public int health = 3;
+   public int currHealth;
+
    public float moveSpeed = 2.0f;
    Rigidbody2D theRB;
    Transform target;
@@ -13,14 +16,11 @@ public class EnemyMovement: MonoBehaviour {
    public Animator animator;
    public Transform playerCharacter;
    public GameObject projectile;
+   public GameObject Enemy;
    public float startTimeShots;
     
    private SpriteRenderer spriteRenderer;
    private float timeBetweenShots;
-
-
-
-
 
 
    private void Awake() {
@@ -31,11 +31,9 @@ public class EnemyMovement: MonoBehaviour {
 
    private void Start() {
     target = GameObject.Find("PlayerCat").transform;
-
-
     timeBetweenShots = startTimeShots;
+    currHealth = health;
    }
-
 
 
    private void Update() {
@@ -59,6 +57,10 @@ public class EnemyMovement: MonoBehaviour {
         {
             timeBetweenShots -= Time.deltaTime;
         }
+
+        if (health <= 0) {
+          Destroy(gameObject);
+        }
    }
 
 
@@ -68,4 +70,19 @@ public class EnemyMovement: MonoBehaviour {
      }
    }
 
+   public void TakeDamage(int damageTaken) {
+        currHealth -= damageTaken;  
+
+        if (currHealth <= 0) {
+          EnemyDie();
+        }       
+   }
+
+   void EnemyDie() {
+      Destroy(gameObject);
+      Debug.Log("Enemy now dead");
+
+      GetComponent<Collider2D>().enabled = false;
+      this.enabled = false;
+   }
 }

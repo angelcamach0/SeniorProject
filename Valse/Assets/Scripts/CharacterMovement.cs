@@ -10,8 +10,12 @@ public class CharacterMovement :  MonoBehaviour {
     public float runSpeed = 20.0f;
     public Animator animator;
 
-    
-    
+
+    public Transform attackPos;
+    public float attackRange = 0.4f;
+    public int damageTaken = 1;
+    public LayerMask whatisEnemy;
+
     void Awake() {
 
       theRB = GetComponent<Rigidbody2D>();
@@ -39,8 +43,6 @@ public class CharacterMovement :  MonoBehaviour {
        ResetAttack();
        AttackInput();
 
-     
-
     } //end Update 
         
      void moveCharacter(Vector2 catVelocity) {
@@ -63,6 +65,14 @@ public class CharacterMovement :  MonoBehaviour {
         if(attack)
         {
             animator.SetTrigger("attack");
+
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatisEnemy);
+
+            //Damage the enemies
+            foreach(Collider2D enemy in hitEnemies) {
+                enemy.GetComponent<EnemyMovement>().TakeDamage(damageTaken);
+                //Debug.Log("Cat hits the enemy: -1 HP damage dealt");
+            }
         }
     }
 
@@ -70,12 +80,12 @@ public class CharacterMovement :  MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            attack = true;
-        }
-    }
+            attack = true; 
+        } 
+    } //end AttackInput
 
-    private void ResetAttack()
-    {
+    private void ResetAttack() 
+     {
         attack = false;
     }
    
@@ -96,6 +106,13 @@ public class CharacterMovement :  MonoBehaviour {
         transform.position = GameObject.FindWithTag("StartPos").transform.position;
     }
 
+
+    void OnDrawGizmosSelected() {
+        if (attackPos == null) 
+          return;
+        
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+   }
 
 } //end CharacterMovement class
 
