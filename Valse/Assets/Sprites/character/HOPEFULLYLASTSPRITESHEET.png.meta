@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,7 +133,7 @@ TextureImporter:
         width: 175
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,6 +141,153 @@ TextureImporter:
       bones: []
       spriteID: 695e803a0d92658438f940bee69008a3
       internalID: 1246894367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 2156
+        width: 496
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8cf1398eac55f40b0d2387c41e1844
+      internalID: -1644980709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_3
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 2177
+        width: 459
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cae1a76dfef17e429f41a89ad0997d5
+      internalID: 124871643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_4
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 2104
+        width: 462
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7abbb263a9d454db2595ac62137c81
+      internalID: -1022184177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_5
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 2171
+        width: 653
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475f32934b0220f429b8133250010dfb
+      internalID: 1006753951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1471
+        width: 570
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b0921c07f6f5f46ae32d8f2d9c5420
+      internalID: -958719690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1470
+        width: 568
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a269a2568a3ed1d42bc71ac72a15164a
+      internalID: 1902790482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HOPEFULLYLASTSPRITESHEET_8
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1489
+        width: 282
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f12ce0476eec0c4e95f0db34f293c4c
+      internalID: 946886781
       vertices: []
       indices: 
       edges: []
@@ -157,7 +304,14 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       HOPEFULLYLASTSPRITESHEET_1: 1246894367
+      HOPEFULLYLASTSPRITESHEET_2: -1644980709
+      HOPEFULLYLASTSPRITESHEET_3: 124871643
+      HOPEFULLYLASTSPRITESHEET_4: -1022184177
+      HOPEFULLYLASTSPRITESHEET_8: 946886781
+      HOPEFULLYLASTSPRITESHEET_7: 1902790482
+      HOPEFULLYLASTSPRITESHEET_5: 1006753951
       HOPEFULLYLASTSPRITESHEET_0: 1953516408
+      HOPEFULLYLASTSPRITESHEET_6: -958719690
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

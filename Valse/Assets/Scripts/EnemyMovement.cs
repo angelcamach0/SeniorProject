@@ -79,10 +79,12 @@ public class EnemyMovement: MonoBehaviour {
    }
 
    void EnemyDie() {
-      Destroy(gameObject);
+      animator.SetTrigger("Die");
+      Destroy(Enemy, 1);
       Debug.Log("Enemy now dead");
 
       GetComponent<Collider2D>().enabled = false;
       this.enabled = false;
+      
    }
 }

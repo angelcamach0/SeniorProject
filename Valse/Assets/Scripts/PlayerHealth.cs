@@ -7,11 +7,12 @@ public class PlayerHealth : MonoBehaviour
 {
      public int playerHealth;
     
-      public GameObject[] lives;
-       public Sprite full_Life;
-       public Sprite empty_Life;
+    public GameObject[] lives;
+    public Sprite full_Life;
+    public Sprite empty_Life;
+    public Animator animator;
 
-private void Start() {
+    private void Start() {
      UpdateHealth();
 }
 
@@ -32,9 +33,19 @@ public void UpdateHealth()
               // lives[i].sprite = empty_Life;
              } //end else
        } //end for
-       
+
+        if (playerHealth <= 0)
+        {
+            PlayerDead();
+        }
 
       } //end UpdateHealth
+
+public void PlayerDead()
+    {
+        animator.SetTrigger("Die");
+        Debug.Log("Player now dead");
+    }
  } //end PlayerHealth method
 
 
