@@ -1,9 +1,12 @@
+//import Unity libraries
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Creates ground and ceiling making static colliders both beneath and overhead the player starting location to prevent users from moving off the current gameScene
 public class GroundCollider : MonoBehaviour
 {
+    //create a BoxCollider for ground level that enables characters to not move off screen either horizontally or vertically
     private BoxCollider2D groundCollider;
     private float groundHorizontalLength;
 
@@ -24,6 +27,7 @@ public class GroundCollider : MonoBehaviour
         }
     }
 
+     //Reposition ground level during each frame in respect to character and enemy movement
      private void RepositionBackground()
     {
         Vector2 groundOffset = new Vector2(groundHorizontalLength * 2f, 0);

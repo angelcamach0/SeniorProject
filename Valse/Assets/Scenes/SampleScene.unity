@@ -704,11 +704,11 @@ PrefabInstance:
       objectReference: {fileID: 1810627410}
     - target: {fileID: 925742860, guid: 721ae700f31d7a1448733747fe9699e5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 925742860, guid: 721ae700f31d7a1448733747fe9699e5, type: 3}
       propertyPath: bulletDamage
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2106597442636668379, guid: 721ae700f31d7a1448733747fe9699e5, type: 3}
       propertyPath: m_RootOrder

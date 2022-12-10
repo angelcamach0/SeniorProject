@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//Music script designed to handle game music audio control playing in the background while game scene is active
 public class MusicControlScript : MonoBehaviour
 {
     public static MusicControlScript instance; // Creates a static varible for a MusicControlScript instance
